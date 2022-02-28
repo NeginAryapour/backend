@@ -1,0 +1,29 @@
+
+
+
+
+method create task kamel kon az ruye patten_id ke mide review hasho besaz  tuye task_service
+
+az vorudi list begiram baraye review patten bad uno be string va bad be format json va bad zakhire tu db va barax anjam bedm
+
+single tone kardn task_time_service 
+
+
+
+#orm_mode = True bekhunam
+
+
+
+front 
+
+maxi milianus tuturial 3-4 hours
+
+login page
+
+
+
+
+
+
+
+

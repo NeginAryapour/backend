@@ -1,0 +1,10 @@
+/.vscode/
+/.env/
+/__pycashe__/
+/src/__pycashe__/
+/src/controller/__pycashe__/
+/src/model/__pycashe__/
+/src/schema/__pycashe__/
+/src/service/__pycashe__/
+/src/todo.txt/
+/src/database.db/
