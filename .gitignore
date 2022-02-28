@@ -6,5 +6,5 @@
 /src/model/__pycashe__/
 /src/schema/__pycashe__/
 /src/service/__pycashe__/
-/src/todo.txt/
-/src/database.db/
+/src/todo.txt
+/src/database.db
