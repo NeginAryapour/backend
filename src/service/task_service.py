@@ -5,6 +5,7 @@ from model.task_model import Tag, Task
 from schema.tag_schema import TagCreate
 from schema.task_schema import TaskCreate
 from sqlalchemy import null
+import datetime as _dt
 
 from service.review_pattern_service import ReviewPatternService
 
@@ -20,8 +21,29 @@ class TaskService:
         self.db.commit()
         self.db.refresh(task)
         if task.review_pattern_id:
-            review_pattern = self.review_pattern_service.get(task.review_pattern_id) #task besazim say konm az front list begirm
-            pass
+            review_pattern = self.review_pattern_service.get(
+                task.review_pattern_id
+            )  # task besazim say konm az front list begirm
+            review_pattern_list = review_pattern.pattern
+            print("*****************************")
+            print(review_pattern_list)
+            print("*****************************")
+            for i in review_pattern_list:
+                print(f"{type(i)}")
+                task_i = TaskCreate(
+                    title=task.title,
+                    content=task.content,
+                    priority=task.priority,
+                    color=task.color,
+                    is_done=task.is_done,
+                    main_task_id=task.id,
+                    tags=task.tags,
+                    date=_dt.datetime.now()+_dt.timedelta(days=i))
+                print("**********************")
+                print(task_i)
+            #     print("************************")
+                self.create(task=task_i, user_id=user_id)
+            
         return task
 
     def get_all(self, skip: int, limit: int, user_id: int):

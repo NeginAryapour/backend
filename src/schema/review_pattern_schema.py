@@ -7,7 +7,7 @@ from schema.task_schema import Task
 
 class _ReviewPatternBase(_pydantic.BaseModel):
     title : str
-    pattern : str
+    pattern : List[int]
 
 class ReviewPatternCreate(_ReviewPatternBase):
     pass

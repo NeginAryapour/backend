@@ -10,3 +10,7 @@ class ReviewPattern(_database.Base): #schemas
     pattern = _sql.Column(_sql.JSON)
 
     tasks = _orm.relationship("Task", back_populates="review_pattern")
+
+    def __str__(self) -> str:
+        review_pattern_str = f"id={self.id}\ntitle={self.title}\npattern={self.pattern}"
+        return review_pattern_str
